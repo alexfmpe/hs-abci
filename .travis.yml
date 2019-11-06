@@ -27,3 +27,5 @@ script:
 - if [ "$TRAVIS_BRANCH" == "master" ]; then make stylish && git diff-index --quiet HEAD; fi
 
 - make test-libraries
+- stack --nix build
+- stack --nix test hs-abci-types hs-abci-server hs-abci-sdk

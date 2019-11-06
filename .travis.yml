@@ -29,5 +29,6 @@ script:
 - make test-libraries
 
 - curl https://nixos.org/nix/install | sh
+- . $HOME/.nix-profile/etc/profile.d/nix.sh
 - stack --nix build
 - stack --nix test hs-abci-types hs-abci-server hs-abci-sdk
